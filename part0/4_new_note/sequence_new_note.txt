@@ -1,0 +1,16 @@
+title Add a note - old skewl
+
+User->Bro: types a note
+User->Bro: clicks 'SUBMIT'
+
+Bro->Server: HTTP POST /new_note
+Server->Bro: HTTP Response 302 redirect
+
+Bro->Bro: Redirect/Reload
+Bro->Server: Fetch main.css
+Server->Bro: HTTP Response 200 OK
+Bro->Server: Fetch main.js
+Server->Bro: HTTP Response 200 OK
+Bro->Server: Fetch data.json
+Server->Bro: HTTP Response 200 OK
+note right of Bro: Browser renders the js, css, data

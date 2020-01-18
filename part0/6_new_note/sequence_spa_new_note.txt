@@ -1,0 +1,15 @@
+title Add a note - SPA
+
+note over browser:
+user types a note
+user clicks 'SAVE'
+end note
+
+browser->Server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+Server->browser: JSON Response 201 Created
+
+note over browser: 
+Browser renders DOM
+with response data,
+but without reload
+end note
